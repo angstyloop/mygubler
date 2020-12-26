@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Matthew Gray Gubler" src="./assets/mgg_1.jpg">
-    <div class="text">{{quote}}</div>
+    <img alt="Matthew Gray Gubler" src="./assets/mgg.jpg">
+    <div class="text">{{quotes[0]}}</div>
   </div>
 </template>
 
@@ -10,7 +10,10 @@ export default {
   name: 'App',
   data() {
     return {
-      quote: "Love shook my heart like the wind on the mountain rushing over the oak trees."
+      quotes: [
+        "You came and I was crazy for you, and you cooled my mind that burned with longing.",
+        "Love shook my heart like the wind on the mountain rushing over the oak trees.",
+      ]
     }
   },
 }
@@ -18,24 +21,34 @@ export default {
 
 <style>
 #app {
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  background-color: black !important;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #2c3e50;
   position: relative;
-  /*margin-top: 60px;*/
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
-.text {
+.text { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
   position: absolute;
-  bottom: 15%;
-  font-size: 8vh;
+  font-size: 4vh;
   color: white;
   width: auto;
 }
 img {
-  opacity: .8;
+  align-self: flex-start;
+  opacity: .7;
   width: auto;
   max-width: 100%;
   height: auto;
