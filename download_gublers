@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for url in $(cat ../urls.gubler); do
+    curl -O $url
+done

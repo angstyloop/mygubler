@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mv src/assets/mgg.jpg used_gublers/
+new_gubler=$(ls used_gublers| head -n1)
+mv "new_gublers/$new_gubler" src/assets/mgg.jpg
